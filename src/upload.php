@@ -1,10 +1,13 @@
 <?php
      if ($_FILES['userImage']) {
-          //
-          print_r($_FILES['userImage']);
-          foreach ($_FILES['userImage']['name'] as $image) {
-               echo "$image \n";
-          }
+          
+          $get_images_name = $_FILES['userImage']['name'];
+          $images_name_to_string = implode(";", $get_images_name);
+          print_r($images_name_to_string);
+
+          // foreach ($_FILES['userImage']['name'] as $image) {
+          //      echo "$image \n";
+          // }
 
           // if (is_uploaded_file($_FILES['userImage']['tmp_name'])) {
           //      $sourcePath = $_FILES['userImage']['tmp_name'];
